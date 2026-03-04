@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Doe | Web Developer</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color: #fff;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(15, 23, 42, 0.9);
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #38bdf8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #38bdf8;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    padding: 120px 8% 80px;
+}
+
+/* Hero */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home h1 {
+    font-size: 48px;
+}
+
+#home h1 span {
+    color: #38bdf8;
+}
+
+#home p {
+    margin: 20px 0;
+    max-width: 600px;
+    color: #cbd5e1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #38bdf8;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
+
+/* About */
+#about h2,
+#services h2,
+#projects h2,
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+#about p {
+    max-width: 700px;
+    color: #cbd5e1;
+}
+
+/* Services */
+.services-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    flex: 1 1 250px;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+}
+
+/* Projects */
+.projects-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-box {
+    flex: 1 1 250px;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Contact */
+form {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e293b;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    nav ul {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        background: #1e293b;
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        transition: 0.3s;
+    }
+
+    nav ul.active {
+        right: 0;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">JohnDoe</div>
+    <nav>
+        <ul id="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+    </nav>
+</header>
+
+<section id="home">
+    <h1>Hi, I'm <span>John Doe</span></h1>
+    <p>Professional Web Developer specializing in modern, responsive, and high-performance websites and web applications.</p>
+    <a href="#contact" class="btn">Hire Me</a>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate web developer with experience in HTML, CSS, JavaScript, and modern frameworks. I create responsive, user-friendly websites that help businesses grow online.</p>
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+    <div class="services-container">
+        <div class="service-box">
+            <h3>Web Design</h3>
+            <p>Modern and clean UI/UX design for your business website.</p>
+        </div>
+        <div class="service-box">
+            <h3>Frontend Development</h3>
+            <p>Responsive and interactive websites using latest technologies.</p>
+        </div>
+        <div class="service-box">
+            <h3>Backend Development</h3>
+            <p>Secure and scalable backend solutions for web applications.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <div class="project-box">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio built with HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project-box">
+            <h3>E-commerce Site</h3>
+            <p>Fully functional online store with payment integration.</p>
+        </div>
+        <div class="project-box">
+            <h3>Business Landing Page</h3>
+            <p>High-converting landing page for startups.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="sendMessage(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 John Doe | All Rights Reserved
+</footer>
+
+<script>
+// Mobile Menu Toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+// Active Link Highlight on Scroll
+const sections = document.querySelectorAll("section");
+const navLink = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        if(pageYOffset >= sectionTop){
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLink.forEach(link => {
+        link.classList.remove("active");
+        if(link.getAttribute("href").includes(current)){
+            link.classList.add("active");
+        }
+    });
+});
+
+// Fake Form Submission
+function sendMessage(e){
+    e.preventDefault();
+    alert("Thank you! Your message has been sent.");
+}
+</script>
+
+</body>
+</html>
