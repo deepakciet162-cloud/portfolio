@@ -3,217 +3,138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>John Doe | Web Developer</title>
+<title>Deepak Kumar - Technical Consultant</title>
+<meta name="description" content="Deepak Kumar, Technical Consultant, Web Development professional with 5+ years experience in PHP, Laravel, MERN stack, and Moodle development. Based in New Delhi, India.">
+<meta name="keywords" content="Deepak Kumar, Technical Consultant, Web Developer, PHP, Laravel, MERN stack, Moodle, Web Development, Resume, Portfolio">
+<meta name="author" content="Deepak Kumar">
+<link rel="canonical" href="https://yourusername.github.io/portfolio/">
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Open Graph / Social Sharing -->
+<meta property="og:title" content="Deepak Kumar - Technical Consultant">
+<meta property="og:description" content="Technical Consultant with 5+ years experience in Web Development, MERN stack, Moodle, and PHP.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourusername.github.io/portfolio/">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Deepak Kumar - Technical Consultant">
+<meta name="twitter:description" content="Technical Consultant with expertise in Web Development, PHP, Laravel, and MERN stack.">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
 }
 
 body {
-    background: #0f172a;
-    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f8;
+    color: #1a202c;
 }
 
-/* Navbar */
+/* Header */
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(15, 23, 42, 0.9);
-    padding: 15px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #38bdf8;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 30px;
-}
-
-nav ul li a {
-    text-decoration: none;
+    background-color: #1e293b;
     color: #fff;
-    font-weight: 500;
-    transition: 0.3s;
+    padding: 20px 10%;
+    text-align: center;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    color: #38bdf8;
-}
-
-/* Mobile Menu */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* Sections */
-section {
-    min-height: 100vh;
-    padding: 120px 8% 80px;
-}
-
-/* Hero */
-#home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#home h1 {
-    font-size: 48px;
-}
-
-#home h1 span {
-    color: #38bdf8;
-}
-
-#home p {
-    margin: 20px 0;
-    max-width: 600px;
-    color: #cbd5e1;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background: #38bdf8;
-    color: #000;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #0ea5e9;
-}
-
-/* About */
-#about h2,
-#services h2,
-#projects h2,
-#contact h2 {
+header h1 {
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    font-size: 20px;
+    font-weight: 400;
     color: #38bdf8;
 }
 
-#about p {
-    max-width: 700px;
-    color: #cbd5e1;
+/* Contact Info */
+header p {
+    margin-top: 10px;
+    font-size: 16px;
 }
 
-/* Services */
-.services-container {
+/* Section Styles */
+section {
+    padding: 60px 10%;
+}
+
+section h3 {
+    color: #38bdf8;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #38bdf8;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Work Experience & Education */
+.experience, .education, .skills {
+    margin-bottom: 40px;
+}
+
+.job, .edu-item, .skill-item {
+    margin-bottom: 20px;
+}
+
+.job h4, .edu-item h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.job span, .edu-item span {
+    font-weight: 400;
+    color: #64748b;
+}
+
+.job ul, .edu-item ul, .skill-item ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* Skills Section */
+.skills ul {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
-.service-box {
-    flex: 1 1 250px;
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.service-box:hover {
-    transform: translateY(-10px);
-}
-
-/* Projects */
-.projects-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.project-box {
-    flex: 1 1 250px;
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* Contact */
-form {
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-}
-
-input, textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-button {
-    padding: 12px;
-    background: #38bdf8;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 600;
+.skills li {
+    background-color: #38bdf8;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
 }
 
 /* Footer */
 footer {
+    background-color: #1e293b;
+    color: #fff;
     text-align: center;
-    padding: 20px;
-    background: #1e293b;
-    font-size: 14px;
+    padding: 20px 10%;
 }
 
 /* Responsive */
 @media(max-width: 768px){
-    nav ul {
-        position: absolute;
-        top: 70px;
-        right: -100%;
-        background: #1e293b;
-        flex-direction: column;
-        width: 200px;
-        padding: 20px;
-        transition: 0.3s;
+    section {
+        padding: 40px 5%;
     }
-
-    nav ul.active {
-        right: 0;
+    header h1 {
+        font-size: 28px;
     }
-
-    nav ul li {
-        margin: 15px 0;
-    }
-
-    .menu-toggle {
-        display: block;
+    header h2 {
+        font-size: 18px;
     }
 }
 </style>
@@ -221,117 +142,95 @@ footer {
 <body>
 
 <header>
-    <div class="logo">JohnDoe</div>
-    <nav>
-        <ul id="nav-links">
-            <li><a href="#home" class="nav-link active">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="menu-toggle" id="menu-toggle">☰</div>
-    </nav>
+    <h1>Deepak Kumar</h1>
+    <h2>Technical Consultant</h2>
+    <p>Email: <a href="mailto:deepak.ciet161@gmail.com" style="color:#38bdf8;">deepak.ciet161@gmail.com</a> | Contact No.: 8802744941 | R.K. Puram, New Delhi, 110022</p>
 </header>
 
-<section id="home">
-    <h1>Hi, I'm <span>John Doe</span></h1>
-    <p>Professional Web Developer specializing in modern, responsive, and high-performance websites and web applications.</p>
-    <a href="#contact" class="btn">Hire Me</a>
+<section id="summary">
+    <h3>Professional Summary</h3>
+    <p>A proactive and result-driven Web Development professional with 5+ years of experience seeking to use my expertise in developing scalable, high-performance web applications. Passionate about creating innovative and user-friendly solutions that meet business needs.</p>
 </section>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am a passionate web developer with experience in HTML, CSS, JavaScript, and modern frameworks. I create responsive, user-friendly websites that help businesses grow online.</p>
-</section>
-
-<section id="services">
-    <h2>Services</h2>
-    <div class="services-container">
-        <div class="service-box">
-            <h3>Web Design</h3>
-            <p>Modern and clean UI/UX design for your business website.</p>
+<section id="experience">
+    <h3>Work Experience</h3>
+    <div class="experience">
+        <div class="job">
+            <h4>Technical Consultant - CIET, NCERT</h4>
+            <span>May 2024 - Present</span>
+            <ul>
+                <li>Developed and maintained dynamic CIET web pages ensuring user-friendly navigation and up-to-date content.</li>
+                <li>Designed and managed Moodle platforms for NISHTHA and ICT Curriculum, improving online learning accessibility.</li>
+                <li>Conducted security audits for NIC-hosted websites ensuring robust protection and optimal performance.</li>
+            </ul>
         </div>
-        <div class="service-box">
-            <h3>Frontend Development</h3>
-            <p>Responsive and interactive websites using latest technologies.</p>
+        <div class="job">
+            <h4>Content Developer (Technical) - CIET, NCERT</h4>
+            <span>Nov 2021 - May 2024</span>
+            <ul>
+                <li>Designed, developed, and maintained web pages using PHP and Laravel.</li>
+                <li>Managed all NCERT websites on NIC Server and developed EPUB formats for publications.</li>
+                <li>Implemented responsive design and ensured cross-browser compatibility.</li>
+            </ul>
         </div>
-        <div class="service-box">
-            <h3>Backend Development</h3>
-            <p>Secure and scalable backend solutions for web applications.</p>
+        <div class="job">
+            <h4>Project Associate - DEAA, NCERT</h4>
+            <span>Nov 2019 - Mar 2021</span>
+            <ul>
+                <li>Developed and maintained web applications using PHP and MySQL.</li>
+                <li>Updated and monitored the Kala Utsav website and managed social media presence.</li>
+                <li>Coordinated with State Program Coordinators and Nodal Officers to achieve program objectives.</li>
+            </ul>
         </div>
     </div>
 </section>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-container">
-        <div class="project-box">
-            <h3>Portfolio Website</h3>
-            <p>Personal portfolio built with HTML, CSS, and JavaScript.</p>
+<section id="education">
+    <h3>Education</h3>
+    <div class="education">
+        <div class="edu-item">
+            <h4>M.Sc (Informatics) - University of Delhi</h4>
+            <span>2017-19 | 57.19%</span>
         </div>
-        <div class="project-box">
-            <h3>E-commerce Site</h3>
-            <p>Fully functional online store with payment integration.</p>
+        <div class="edu-item">
+            <h4>B.Sc (Mathematics & Physics) - University of Delhi</h4>
+            <span>2012-15 | 61.01%</span>
         </div>
-        <div class="project-box">
-            <h3>Business Landing Page</h3>
-            <p>High-converting landing page for startups.</p>
+        <div class="edu-item">
+            <h4>Intermediate (12th) - Jose Marti Sarvodaya Vidyalaya, New Delhi (CBSE)</h4>
+            <span>2012 | 57.08%</span>
+        </div>
+        <div class="edu-item">
+            <h4>High School (10th) - Sarvodaya Vidyalaya, New Delhi (CBSE)</h4>
+            <span>2010 | 64.44%</span>
         </div>
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <form onsubmit="sendMessage(event)">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+<section id="skills">
+    <h3>Technical Skills</h3>
+    <div class="skills">
+        <ul>
+            <li>PHP</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+            <li>MySQL</li>
+            <li>MERN Stack</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>RESTful API</li>
+            <li>Git</li>
+            <li>Moodle Development</li>
+        </ul>
+    </div>
 </section>
 
 <footer>
-    © 2026 John Doe | All Rights Reserved
+    <p>&copy; 2026 Deepak Kumar | Web Development & Technical Consulting | <a href="mailto:deepak.ciet161@gmail.com" style="color:#38bdf8;">Contact Me</a></p>
 </footer>
-
-<script>
-// Mobile Menu Toggle
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
-
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-
-// Active Link Highlight on Scroll
-const sections = document.querySelectorAll("section");
-const navLink = document.querySelectorAll(".nav-link");
-
-window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 150;
-        if(pageYOffset >= sectionTop){
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLink.forEach(link => {
-        link.classList.remove("active");
-        if(link.getAttribute("href").includes(current)){
-            link.classList.add("active");
-        }
-    });
-});
-
-// Fake Form Submission
-function sendMessage(e){
-    e.preventDefault();
-    alert("Thank you! Your message has been sent.");
-}
-</script>
 
 </body>
 </html>
